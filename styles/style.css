@@ -125,15 +125,15 @@ background: rgba(210, 105, 30, 0.857);
 }
 
 
-@media (max-width :400px){
+@media (max-width :560px){
   .containe-geral{
-   width: 300px; 
+   width: 400px; 
    padding: 5px;
    margin: 5px;
   }
   
   .container{
-    width: 280px;
+    width: 380px;
     margin: 5px;
     padding: 5px;
   }
