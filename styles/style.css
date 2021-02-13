@@ -125,7 +125,7 @@ background: rgba(210, 105, 30, 0.857);
 }
 
 
-@media (max-width :560px){
+@media (max-width :570px){
   .containe-geral{
    width: 400px; 
    padding: 5px;
