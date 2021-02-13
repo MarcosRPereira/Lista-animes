@@ -1,0 +1,156 @@
+*{
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  
+}
+.container-geral{
+  background: rgb(232, 244, 255);
+  padding:  20px 150px;
+}
+.container{
+  
+  background: rgba(198, 213, 247, 0.575);
+  max-width: 500px;
+}
+h1{
+  color:teal;
+  font-size:30px ;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.857);
+  font-weight: bolder;
+
+}
+form{
+  margin: 30px;
+  
+}
+label{
+  width: 70px;
+  padding: 10px;
+  margin: 50px 15px 30px 80px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+
+input{
+  background: rgb(225, 238, 252);
+  padding: 5px;
+  margin: 5px;
+  max-width: 150px;
+  border: 1px solid turquoise;
+}
+
+button{
+  
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px black;
+  color: azure;
+}
+
+
+
+
+.hiden{
+  display: none;
+}
+
+
+
+
+
+.button{
+  background: rgba(69, 119, 121, 0.878);
+  margin: 15px 0 10px 200px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+
+
+.epi{
+  margin-right: 5px;
+}
+
+.stat{
+  margin-right:18px;
+}
+
+.tabela{
+  background: rgb(225, 238, 252);
+  margin-left:50px;
+}
+thead tr td{
+  background: rgba(0, 128, 128, 0.803);
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.303);
+  color: azure;
+}
+
+.color-anime,.color-episodio,.color-status{
+  color: azure;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.303);
+  
+}
+
+
+.color-anime{
+background:rgb(198, 213, 247);
+}
+
+.color-episodio{
+  background: rgba(134, 144, 165, 0.761);
+}
+
+.color-status{
+  background: rgb(198, 213, 247);
+}
+
+.edit{
+  background: cadetblue;
+  
+}
+.del{
+background: rgba(210, 105, 30, 0.857);
+
+}
+
+
+@media (max-width :400px){
+  .containe-geral{
+   width: 300px; 
+   padding: 5px;
+   margin: 5px;
+  }
+  
+  .container{
+    width: 280px;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  form{
+    margin: 5px;
+  }
+
+  input{
+    width: 130px;
+  }
+
+  .button{
+    margin: 10px;
+  }
+
+  .tabela{
+    margin: 5px;
+  }
+}
