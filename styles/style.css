@@ -67,7 +67,7 @@ button{
 
 
 .button{
-  background: rgba(69, 119, 121, 0.878);
+  background: rgba(69, 119, 121, 0.946);
   margin: 15px 0 10px 200px;
   padding: 15px;
   border-radius: 5px;
@@ -84,7 +84,7 @@ button{
 }
 
 .tabela{
-  background: rgb(225, 238, 252);
+  background: rgba(225, 238, 252, 0.734);
   margin-left:50px;
 }
 thead tr td{
