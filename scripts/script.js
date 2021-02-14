@@ -1,7 +1,9 @@
 // variaveis globais
-const DATABASE ='Lista'
-const dadoLocal = localStorage.getItem(DATABASE);
+var dadoLocal =[];
+dadoLocal = localStorage.getItem('DATABASE');
+//var dadoLocal = 
 
+var isEditing = false;
 // ternario - se dadoLocal tiver conteudo, vai retornar o parse do conteudo. Se não, retorna o objeto vazio.
 var data = dadoLocal ?
   JSON.parse(dadoLocal):
@@ -47,7 +49,10 @@ function add(){
   let botao = document.querySelector(".button")
   
   data.id++; // incrementa o número do id
-  console.log(data.id)
+  
+  if(isEditing){
+    edit()
+  } else{
 
  //adiciona os elementos do input no array.
   data.list.push({
@@ -56,7 +61,9 @@ function add(){
     episodio:localEpisodio.value,
     status:localStatus.value,
    });
-  
+   isEditing = false;
+  }
+
   // limpa os valores do input e da foco no input anime.
   localAnime.value = "";
   localEpisodio.value = "";
@@ -67,15 +74,39 @@ function add(){
   render();
   save();
   
+ 
+  
 }
 
+function update (novo){
+  data.list[currentId] = novo;
+
+}
 // edita o registro
-function edit(id, anime){
-  data.list = data.list.filter(function(item){
+function edit(id, anime, episodio, status){
+  data.list = data.list.map(function(item){
     if(item.id === id){
-      item.anime = anime;
+      
+      
+     // pega o nome do anime e coloca no input
+      localAnime.value = item.anime;
+
+     // pega o episodio e coloca no input
+      localEpisodio.value = item.episodio;
+
+      // pega o status e coloca no input
+      localStatus.value = item.status
+
+      localAnime.focus();
+      
+     //isEditing = true;
+      currentId =id;
+     //update(item.push);
+     console.log(item)
+     console.log(typeof(item))
+     
     }
-    return item
+      return item;
   })
     
   render();
@@ -100,6 +131,7 @@ function deleteReg(id){
 
 //salva os dados no localStorage
 function save(){
-  localStorage.setItem(DATABASE, JSON.stringify (data))
+  localStorage.setItem(dadoLocal, JSON.stringify (data))
 
 }
+
